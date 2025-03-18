@@ -1,16 +1,54 @@
+#nav_tab {
+    width: fit-content;
+    padding: 10px;
+    pointer-events: all;
+    position: absolute;
+    top: 5%;
+    z-index: 10;
+}
+
+.nav_btn {
+    background-color: rgba(82, 82, 82, 0.2);
+    transition: 0.2s;
+}
+
+.nav_btn:hover {
+    background-color: rgba(200, 200, 200, 0.40);
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+canvas{
+    height: 100%;
+    width: 100%;
+}
+
 body {
-    background-color: #f7f4f3;
+    background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
+    height: 100%;
+    max-width: 100vw;
+    pointer-events: none;
 }
 
 #home_details {
-    height: 80%;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    translate: -8px 0%;
     align-items: center;
     flex-direction: row;
-    transform: translate(0%, 40%);
+    position: fixed;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    bottom: 0;
 }
 
 #home_text {
@@ -19,12 +57,13 @@ body {
     align-items: flex-end;
     flex-direction: column;
     text-align: right;
+    width: 50%;
 }
 
 .descriptive_text {
     font-size: 1em;
     color: #222222;
-    max-width: 60%;
+    max-width: 70%;
 }
 
 h1 {
@@ -33,13 +72,13 @@ h1 {
     margin: 0;
 }
 
-h3 {
+h4 {
     font-size: 2em;
     color: #222222;
     margin: 0;
 }
 
-button {
+a {
     outline: none;
     cursor: pointer;
     border: none;
@@ -57,11 +96,31 @@ button {
     background: #222222;
     color: #f7f4f3;
     transition: all 0.5s;
+    pointer-events: all;
+    text-decoration: none;
 }
 
-button:hover {
-    background: #f7f4f3;
-    color: #222222;
-    outline: 0.1em solid #222222;
+a:hover {
+    background: #464646;
+    color: #f7f4f3;
 }
 
+.custom-shape-divider-bottom-1742317700 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1742317700 svg {
+    position: relative;
+    display: block;
+    width: calc(151% + 1.3px);
+    height: 112px;
+}
+
+.custom-shape-divider-bottom-1742317700 .shape-fill {
+    fill: #5b2333;
+}
