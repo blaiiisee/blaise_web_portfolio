@@ -61,19 +61,19 @@ body {
 }
 
 .descriptive_text {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #222222;
     max-width: 70%;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
     color: #5b2333;
     margin: 0;
 }
 
 h4 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #222222;
     margin: 0;
 }
