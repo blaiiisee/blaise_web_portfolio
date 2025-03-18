@@ -85,11 +85,6 @@ function generateRandomTorus() {
 }
 
 function App() {
-  // Load Models not needed!!!
-  const rubiks = useLoader(GLTFLoader, '../public/models/rubiks/scene.gltf')
-  const dumbell = useLoader(GLTFLoader, '../public/models/dumbell/scene.gltf')
-  const cloud = useLoader(GLTFLoader, '../public/models/cloud/scene.gltf')
-
   return (
     <div>
       <Canvas camera={{fov:60}} scene={{background:'black'}}>
