@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Navbutton from './Nav_btns';
+import NavButton from './Nav_btns';
 
 
 export default function MakeTab() {
@@ -11,12 +11,29 @@ export default function MakeTab() {
   };
     */
 
+  const [selectedTab, setSelectedTab] = React.useState('Home'); // Default selected tab
+
+  const handleClick = (name) => {
+      setSelectedTab(name); // Update selected tab
+  };
+
+  React.useEffect(() => {
+    const sections = ["home", "projects", "contact"];
+
+    sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.style.opacity = id === selectedTab.toLowerCase() ? "1" : "0";
+        }
+    });
+  }, [selectedTab]); // Runs whenever selectedTab changes
+
   return (
-    <div style={nav_style}>
-        <Navbutton  Name={'Home'} State={'selected'} />
-        <Navbutton Name={'Projects'} State={'deselected'} />
-        <Navbutton Name={'Contact'} State={'deselected'} />
-    </div>
+      <div style={nav_style}>
+          <NavButton Name={'Home'} State={selectedTab === 'Home' ? 'selected' : 'deselected'} onClick={handleClick} />
+          <NavButton Name={'Projects'} State={selectedTab === 'Projects' ? 'selected' : 'deselected'} onClick={handleClick} />
+          <NavButton Name={'Contact'} State={selectedTab === 'Contact' ? 'selected' : 'deselected'} onClick={handleClick} />
+      </div>
   );
 }
 

@@ -2,8 +2,7 @@ import { useState, useRef } from 'react'
 import './App.css'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
-import { EffectComposer, DepthOfField, Pixelation, } from '@react-three/postprocessing'
+import { EffectComposer, DepthOfField, } from '@react-three/postprocessing'
 
 function Dynamic({children}) {
   const ref = useRef()
@@ -29,7 +28,7 @@ function generateRandomCubes() {
       (Math.random() - 0.5) * 5, 
       (Math.random() - 0.5) * 5, 
     ]
-    const color = new THREE.Color(Math.random(), Math.random()/3, Math.random()/3); // Random RGB color
+    const color = new THREE.Color(0x5b2333);
 
     const scale = Math.random() * 3 + 0.5; // Random scale between 0.5 and 2.5
 
@@ -50,7 +49,7 @@ function generateRandomSpheres() {
       (Math.random() - 0.5) * 100, // Random z position between -10 and 10
     ];
 
-    const color = new THREE.Color(Math.random(), Math.random()/3, Math.random()/3); // Random RGB color
+    const color = new THREE.Color(0x5b2333);
 
     const scale = Math.random() * 3 + 0.5; // Random scale between 0.5 and 2.5
 
@@ -71,7 +70,7 @@ function generateRandomTorus() {
       (Math.random() - 0.5) * 100, // Random z position between -10 and 10
     ];
 
-    const color = new THREE.Color(Math.random(), Math.random()/3, Math.random()/3); // Random RGB color
+    const color = new THREE.Color(0x5b2333);
 
     const scale = Math.random() * 3 + 0.5; // Random scale between 0.5 and 2.5
 
@@ -102,9 +101,6 @@ function App() {
             focusDistance={0} // where to focus
             focalLength={0.02} // focal length
             bokehScale={3} // bokeh size
-          />
-          <Pixelation
-            granularity={2}
           />
         </EffectComposer>
       </Canvas>

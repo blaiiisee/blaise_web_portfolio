@@ -30,25 +30,42 @@ canvas{
 body {
     background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
-    height: 100%;
-    max-width: 100vw;
     pointer-events: none;
+    margin: 0;
+    overflow: hidden;
+    height: 101%;
+    width: 101%;;
 }
 
-#home_details {
+#home_bg {
+    position: absolute;
+    z-index: -1;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    translate: -8px 0%;
-    align-items: center;
-    flex-direction: row;
-    position: fixed;
     background: rgba(255,255,255,0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.25);
-    bottom: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+#home {
+    /* just in case need balikan from .detail_page */
+
+}
+
+.detail_page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    translate: -8px -5%;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    transition: all 0.2s;
 }
 
 #home_text {
@@ -115,10 +132,11 @@ a:hover {
 }
 
 .custom-shape-divider-bottom-1742317700 svg {
-    position: relative;
+    position: fixed;
     display: block;
     width: calc(151% + 1.3px);
     height: 112px;
+    bottom: 0;
 }
 
 .custom-shape-divider-bottom-1742317700 .shape-fill {
