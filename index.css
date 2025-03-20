@@ -95,7 +95,7 @@ h4 {
     margin: 0;
 }
 
-a {
+#download_resume {
     outline: none;
     cursor: pointer;
     border: none;
@@ -117,9 +117,15 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+#download_resume:hover {
     background: #464646;
     color: #f7f4f3;
+}
+
+#home_buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .custom-shape-divider-bottom-1742317700 {
