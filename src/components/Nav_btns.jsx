@@ -33,7 +33,7 @@ export default function NavButton({ Name, State, onClick }) {
 
     return (
         <div
-            ref={btnRef} // ✅ Attach ref here
+            ref={btnRef}
             onClick={() => onClick(Name)}
             style={State === 'selected' ? div_style_selected : div_style_default}
             className="nav_btn"

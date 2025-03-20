@@ -96,11 +96,11 @@ h4 {
     margin: 0;
 }
 
-#download_resume {
+.extlink_btn {
     outline: none;
     cursor: pointer;
     border: none;
-    padding: 0.9rem 2rem;
+    padding: 0.6rem 1.2rem;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
@@ -118,7 +118,7 @@ h4 {
     text-decoration: none;
 }
 
-#download_resume:hover {
+.extlink_btn:hover {
     background: #464646;
     color: #f7f4f3;
 }

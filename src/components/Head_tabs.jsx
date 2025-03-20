@@ -19,6 +19,7 @@ export default function MakeTab() {
 
   React.useEffect(() => {
     const sections = ["home", "projects", "contact"];
+    const proj_logs = document.getElementsByClassName("project_log")
 
     sections.forEach((id) => {
         const section = document.getElementById(id);
@@ -26,6 +27,11 @@ export default function MakeTab() {
             section.style.opacity = id === selectedTab.toLowerCase() ? "1" : "0";
         }
     });
+
+    Array.from(proj_logs).forEach((log) => {
+      log.style.pointerEvents = selectedTab.toLowerCase() === "projects" ? "all" : "none";
+    });
+    
   }, [selectedTab]); // Runs whenever selectedTab changes
 
   return (

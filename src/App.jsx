@@ -15,34 +15,8 @@ function Dynamic({children}) {
   return <group ref={ref}>{children}</group>
 }
 
-function generateRandomCubes() {
-  return new Array(60).fill().map((_, i) => {
-    const position = [
-      (Math.random() - 0.5) * 100,
-      (Math.random() - 0.5) * 100,
-      (Math.random() - 0.5) * 100,
-    ];
-
-    const rotation = [
-      (Math.random() - 0.5) * 5,
-      (Math.random() - 0.5) * 5, 
-      (Math.random() - 0.5) * 5, 
-    ]
-    const color = new THREE.Color(0x5b2333);
-
-    const scale = Math.random() * 3 + 0.5; // Random scale between 0.5 and 2.5
-
-    return (
-      <mesh key={i} position={position} scale={scale} rotation={rotation}>
-        <boxGeometry />
-        <meshToonMaterial color={color} />
-      </mesh>
-    );
-  });
-}
-
-function generateRandomSpheres() {
-  return new Array(60).fill().map((_, i) => {
+function generateRandomTetrahedron() {
+  return new Array(240).fill().map((_, i) => {
     const position = [
       (Math.random() - 0.5) * 100, // Random x position between -10 and 10
       (Math.random() - 0.5) * 100, // Random y position between -10 and 10
@@ -55,28 +29,7 @@ function generateRandomSpheres() {
 
     return (
       <mesh key={i} position={position} scale={scale}>
-        <sphereGeometry args={[1, 32, 32]} /> {/* Sphere with smooth surface */}
-        <meshToonMaterial color={color} />
-      </mesh>
-    );
-  });
-}
-
-function generateRandomTorus() {
-  return new Array(60).fill().map((_, i) => {
-    const position = [
-      (Math.random() - 0.5) * 100, // Random x position between -10 and 10
-      (Math.random() - 0.5) * 100, // Random y position between -10 and 10
-      (Math.random() - 0.5) * 100, // Random z position between -10 and 10
-    ];
-
-    const color = new THREE.Color(0x5b2333);
-
-    const scale = Math.random() * 3 + 0.5; // Random scale between 0.5 and 2.5
-
-    return (
-      <mesh key={i} position={position} scale={scale}>
-        <torusGeometry args={[1, 0.4, 12, 24]} />
+        <tetrahedronGeometry args={[1, 0  ]} />
         <meshToonMaterial color={color} />
       </mesh>
     );
@@ -91,9 +44,8 @@ function App() {
         <directionalLight position={[0, 0, 5]}/>
         <group>
           <Dynamic>
-            {generateRandomCubes()}
-            {generateRandomSpheres()}
-            {generateRandomTorus()}
+ 
+            {generateRandomTetrahedron()}
           </Dynamic>
         </group>
         <EffectComposer>
