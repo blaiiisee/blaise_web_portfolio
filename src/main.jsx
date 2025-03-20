@@ -31,6 +31,6 @@ createRoot(document.getElementById('features')).render(
 
 createRoot(document.getElementById('projects')).render(
   <StrictMode>
-    <MakeLog Name={'Project'}/>
+    <MakeLog Name={'Page in Development'}/>
   </StrictMode>,
 )
