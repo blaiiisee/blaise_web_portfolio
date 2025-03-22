@@ -1,5 +1,6 @@
 import * as React from 'react';
 import NavButton from './Nav_btns';
+import { NoEncryption } from '@mui/icons-material';
 
 
 export default function MakeTab() {
@@ -19,7 +20,6 @@ export default function MakeTab() {
 
   React.useEffect(() => {
     const sections = ["home", "projects", "contact"];
-    const proj_logs = document.getElementsByClassName("project_log")
 
     sections.forEach((id) => {
         const section = document.getElementById(id);
@@ -28,9 +28,12 @@ export default function MakeTab() {
         }
     });
 
-    Array.from(proj_logs).forEach((log) => {
-      log.style.pointerEvents = selectedTab.toLowerCase() === "projects" ? "all" : "none";
-    });
+    // Turn off parallax effect if on projects page
+    if (selectedTab.toLowerCase() === "projects") {
+      document.getElementById("projects").style.pointerEvents = 'all';
+    } else {
+      document.getElementById("projects").style.pointerEvents = 'none';
+    }
     
   }, [selectedTab]); // Runs whenever selectedTab changes
 
