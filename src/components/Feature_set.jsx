@@ -24,12 +24,14 @@ const style = {
     height: '4em',
     position: 'fixed',
     zIndex: 20,
-    backgroundColor: '#f7f4f3',
+    backgroundColor: 'rgba(255, 255, 255, 0.20)',
     display: 'flex',
     flexDirection: 'row',
     borderRadius: '15px',
-    boxShadow: '0px 20px 20px rgba(46, 46, 46, 0.25)',
-    alignItems: 'center'
+    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+    alignItems: 'center',
+    backdropFilter: 'blur(6.2px)',
+    WebkitBackdropFilter: 'blur(6.2px)'
 }
 
 const style_top = {
