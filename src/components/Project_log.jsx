@@ -53,9 +53,11 @@ const logStyle = {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    backgroundColor: '#f7f4f3',
+    backgroundcolor: 'rgba(255, 255, 255, 0.20)',
     borderRadius: '2em',
     boxShadow: '0px 20px 20px rgba(46, 46, 46, 0.25)',
+    backdropFilter: 'blur(6.2px)',
+    WebkitBackdropFilter: 'blur(6.2px)',
     marginTop: '2em'
 };
 
