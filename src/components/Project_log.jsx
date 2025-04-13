@@ -55,7 +55,7 @@ const logStyle = {
     justifyContent: 'space-evenly',
     backgroundcolor: 'rgba(255, 255, 255, 0.20)',
     borderRadius: '2em',
-    boxShadow: '0px 20px 20px rgba(46, 46, 46, 0.25)',
+    boxShadow: '0px 4px 30px rgba(0, 0, 0, 0.1)',
     backdropFilter: 'blur(9px)',
     WebkitBackdropFilter: 'blur(9px)',
     marginTop: '2em',
