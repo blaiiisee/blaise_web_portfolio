@@ -56,9 +56,10 @@ const logStyle = {
     backgroundcolor: 'rgba(255, 255, 255, 0.20)',
     borderRadius: '2em',
     boxShadow: '0px 20px 20px rgba(46, 46, 46, 0.25)',
-    backdropFilter: 'blur(6.2px)',
-    WebkitBackdropFilter: 'blur(6.2px)',
-    marginTop: '2em'
+    backdropFilter: 'blur(9px)',
+    WebkitBackdropFilter: 'blur(9px)',
+    marginTop: '2em',
+    border: '2px solid rgba(255, 255, 255, 0.6)'
 };
 
 const imageContainerStyle = {
