@@ -6,7 +6,7 @@ function MakeFeature({ Icon, Name, Left, Top, Width, SVGs}) {
             <Icon style={icon_style}/>
             <div style={{display: 'flex', flexDirection: 'column', width: '100%', height: '100%'}}>
                 <div style={style_top}>
-                    <p style={{marginTop: '0.35em', color: '#5b2333'}}>{Name}</p>
+                    <p style={{marginTop: '0.35em'}}>{Name}</p>
                 </div>
                 <div style={style_bottom}>
                 {SVGs.map((svg, index) => (
