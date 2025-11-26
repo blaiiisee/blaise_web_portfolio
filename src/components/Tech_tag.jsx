@@ -6,6 +6,11 @@ const styles = {
         border: '2px solid #a37f08',
         color: 'rgb(163, 127, 8)'
     },
+    TypeScript: {
+        backgroundColor: 'rgba(65, 255, 166, 0.2)',
+        border: '2px solid #08a389ff',
+        color: 'rgba(8, 163, 111, 1)'
+    },
     BackEnd: {
         backgroundColor: 'rgba(65, 255, 97, 0.2)',
         border: '2px solid rgb(8, 163, 47)',
