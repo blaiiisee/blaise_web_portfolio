@@ -36,7 +36,7 @@ const himig_desc = `Himig is an AI-powered playlist generator that combines user
 
 createRoot(document.getElementById('projects')).render(
   <StrictMode>
-    <MakeLog Img={'himig.png'} Name={'Himig: A Personalized Spotify Playlist Generator'} Technologies={['TypeScript', 'FrontEnd', 'Backend', 'NodeJS', 'Vite', 'ThreeJS', 'React']} Description={himig_desc} Link={'https://github.com/blaiiisee/spotify-genai-frontend'} />
+    <MakeLog Img={'himig.png'} Name={'Himig: A Personalized Spotify Playlist Generator'} Technologies={['TypeScript', 'FrontEnd', 'BackEnd', 'AI Powered', 'NodeJS', 'Vite', 'ThreeJS', 'React']} Description={himig_desc} Link={'https://github.com/blaiiisee/spotify-genai-frontend'} />
     <MakeLog Img={'digitaltwin.png'} Name={'A Web-based Digital Visualization of the UPD EEEI Smart-iLab'} Technologies={['JavaScript', 'FrontEnd', 'NodeJS', 'Vite', 'ThreeJS']} Description={twin_desc} Link={'https://github.com/blaiiisee/Smart-iLab_DigitalTwin'} />
     <MakeLog Img={'restapi.png'} Name={'A REST API for University of the Philippines - Diliman EEEI Smart-iLab'} Technologies={['JavaScript', 'BackEnd', 'REST API', 'NodeJS', 'Vite', 'SQL']} Description={rest_desc} Link={'https://github.com/blaiiisee/SSL-IoT1-REST'} />
     <MakeLog Img={'webportfolio.png'} Name={`Ivan Blaise Gonzales's Web Portfolio`} Technologies={['JavaScript', 'FrontEnd', 'ReactJS', 'NodeJS', 'Vite', 'ThreeJS']} Description={portfolio_desc} Link={'https://github.com/blaiiisee/blaise_web_portfolio'} />

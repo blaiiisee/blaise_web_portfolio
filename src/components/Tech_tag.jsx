@@ -16,6 +16,11 @@ const styles = {
         border: '2px solid rgb(8, 163, 47)',
         color: 'rgb(8, 163, 47)'
     },
+    'AI Powered': {
+        backgroundColor: 'rgba(255, 65, 255, 0.2)',
+        border: '2px solid rgba(163, 8, 163, 1)',
+        color: 'rgba(163, 8, 142, 1)'
+    },
     FrontEnd: {
         backgroundColor: 'rgba(255, 65, 138, 0.2)',
         border: '2px solid rgb(163, 8, 80)',
