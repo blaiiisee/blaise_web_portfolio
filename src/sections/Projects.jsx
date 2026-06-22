@@ -11,8 +11,9 @@ export default function Projects() {
             <h2 id="projects-title">Projects built to be used, explored, and felt.</h2>
           </div>
           <p>
-            A selection of full-stack, AI, IoT, and interactive 3D work. Each project started with a
-            practical problem and became a chance to learn something new.
+            A selection of creative direction, iOS, UI/UX, full-stack, AI, IoT, and interactive 3D
+            work. Each project started with a practical problem and became a chance to learn
+            something new.
           </p>
         </div>
 

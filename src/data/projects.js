@@ -1,5 +1,42 @@
 export const projects = [
   {
+    id: 'tina-calorie-tracker',
+    title: 'Tina - Calorie Tracker',
+    subtitle: 'Thoughtful calorie tracking, designed for iOS',
+    image: '/project_imgs/tina-calorie-tracker.jpeg',
+    imageAlt:
+      'Tina - Calorie Tracker ranked as the number one downloaded paid Health and Fitness app in the Philippines',
+    imageFit: 'portrait',
+    summary:
+      'Designed and developed as a focused iOS experience that makes calorie tracking feel simple and approachable. Tina uses Apple’s Foundation Models framework to bring intelligent, on-device features into a carefully crafted Swift interface—and, at one point, became the top downloaded paid Health & Fitness app on the Philippine App Store.',
+    technologies: ['UI/UX Design', 'Swift', 'iOS Development', 'Apple Foundation Models'],
+    links: [
+      {
+        label: 'View on the App Store',
+        href: 'https://apps.apple.com/ph/app/tina-calorie-tracker/id6768591635',
+        type: 'appStore',
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: 'maskipaps-the-crossover-2023',
+    title: 'Maskipaps: The Crossover 2023',
+    subtitle: 'Creatives & Publicity Head · Feb–Dec 2023',
+    image: '/project_imgs/maskipaps-the-crossover-2023.jpeg',
+    imageAlt: 'Maskipaps: The Crossover 2023 event logo against a neon galaxy backdrop',
+    summary:
+      'Led a five-person creative team in developing the event’s branding kit and planning its publication campaign across photos, videos, and banners. The Facebook campaign reached more than 3 million users, gained over 10,000 page followers, and delivered a top post with 1.3 million users reached and over 18,000 reactions.',
+    technologies: [
+      'Photoshop',
+      'Premiere Pro',
+      'After Effects',
+      'Project Planning',
+      'Managing Creative Teams',
+    ],
+    links: [],
+  },
+  {
     id: 'himig',
     title: 'Himig',
     subtitle: 'Personalized Spotify Playlist Generator',
@@ -14,7 +51,6 @@ export const projects = [
         type: 'github',
       },
     ],
-    featured: true,
   },
   {
     id: 'smart-ilab-digital-twin',
