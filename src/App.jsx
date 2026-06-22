@@ -1,12 +1,13 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import Navbar from './components/Navbar.jsx'
 import Hero from './sections/Hero.jsx'
+import Experience from './sections/Experience.jsx'
 import Projects from './sections/Projects.jsx'
 import Contact from './sections/Contact.jsx'
 
 const BackgroundScene = lazy(() => import('./components/BackgroundScene.jsx'))
 
-const sectionIds = ['home', 'projects', 'contact']
+const sectionIds = ['home', 'experience', 'projects', 'contact']
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -49,6 +50,7 @@ function App() {
 
       <main id="main-content">
         <Hero />
+        <Experience />
         <Projects />
         <Contact />
       </main>

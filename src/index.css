@@ -337,18 +337,6 @@ button {
   box-shadow: var(--shadow);
 }
 
-.profile-card::after {
-  position: absolute;
-  right: -90px;
-  bottom: -110px;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  content: '';
-  background: rgba(104, 39, 61, 0.12);
-  filter: blur(3px);
-}
-
 .profile-card__image-wrap {
   position: relative;
   overflow: hidden;
@@ -501,6 +489,180 @@ button {
   width: 17px;
   height: 17px;
   object-fit: contain;
+}
+
+.experience {
+  padding-top: 135px;
+}
+
+.experience-timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 52px minmax(150px, 0.36fr) minmax(0, 1.64fr);
+  gap: clamp(22px, 3.5vw, 48px);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.experience-card::after {
+  position: absolute;
+  right: -95px;
+  bottom: -135px;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  content: '';
+  background: radial-gradient(circle, rgba(104, 39, 61, 0.09), transparent 68%);
+  pointer-events: none;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.experience-card__rail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.experience-card__number {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(104, 39, 61, 0.2);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--plum);
+  background: var(--plum-soft);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.experience-card__line {
+  width: 1px;
+  height: 100%;
+  margin-top: 14px;
+  background: linear-gradient(var(--line), transparent);
+}
+
+.experience-card__meta {
+  padding-top: 4px;
+}
+
+.experience-card__meta p {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.experience-card__meta span {
+  margin-top: 8px;
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.experience-card__content {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.experience-card__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.experience-card__company {
+  margin: 0 0 7px;
+  color: var(--plum);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.experience-card h3 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.status-pill {
+  flex: 0 0 auto;
+  padding: 0.48rem 0.72rem;
+  border: 1px solid rgba(104, 39, 61, 0.15);
+  border-radius: 999px;
+  color: var(--plum);
+  background: var(--plum-soft);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.status-pill::before {
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  content: '';
+  background: var(--plum);
+  box-shadow: 0 0 0 4px rgba(104, 39, 61, 0.1);
+}
+
+.experience-card__summary {
+  max-width: 800px;
+  margin: 21px 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.experience-card__highlights {
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+  list-style: none;
+}
+
+.experience-card__highlights li {
+  position: relative;
+  padding-left: 22px;
+  color: #51464a;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.experience-card__highlights li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(104, 39, 61, 0.35);
+  border-radius: 50%;
+  content: '';
+  background: rgba(104, 39, 61, 0.1);
 }
 
 .projects {
@@ -848,6 +1010,11 @@ button {
     gap: 32px;
   }
 
+  .experience-card {
+    grid-template-columns: 48px minmax(130px, 0.32fr) minmax(0, 1.68fr);
+    gap: 24px;
+  }
+
   .project-card--featured {
     grid-template-columns: 1fr 1fr;
   }
@@ -942,6 +1109,34 @@ button {
     max-width: 620px;
   }
 
+  .experience-card {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .experience-card__rail {
+    grid-row: 1 / span 2;
+  }
+
+  .experience-card__number {
+    width: 42px;
+    height: 42px;
+  }
+
+  .experience-card__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 12px;
+  }
+
+  .experience-card__meta span {
+    margin-top: 0;
+  }
+
+  .experience-card__content {
+    grid-column: 2;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -1009,6 +1204,32 @@ button {
     font-size: clamp(2.35rem, 11.5vw, 3.35rem);
   }
 
+  .experience-card {
+    padding: 24px 18px;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .experience-card__number {
+    width: 34px;
+    height: 34px;
+    font-size: 0.63rem;
+  }
+
+  .experience-card__heading {
+    display: grid;
+    gap: 13px;
+  }
+
+  .status-pill {
+    width: fit-content;
+    grid-row: 1;
+  }
+
+  .experience-card h3 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
   .project-card__media,
   .project-card--featured .project-card__media {
     min-height: 220px;
@@ -1055,6 +1276,17 @@ button {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-mark {
+    font-size: 0.78rem;
+  }
+
+  .nav-link {
+    padding-inline: 0.4rem;
+    font-size: 0.67rem;
   }
 }
 
