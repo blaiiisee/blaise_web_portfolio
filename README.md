@@ -1,12 +1,54 @@
-# React + Vite
+# Ivan Blaise Gonzales — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, data-driven portfolio for software engineer and creative web developer Ivan Blaise Gonzales. Built with React, Vite, React Three Fiber, and plain CSS.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Then open the local URL printed by Vite, normally `http://localhost:5173`.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Add a project
+
+1. Add the project image to `public/project_imgs/`.
+2. Add one project object to `src/data/projects.js`.
+
+Each project supports this shape:
+
+```js
+{
+  id: 'unique-project-id',
+  title: 'Project name',
+  subtitle: 'Short supporting line',
+  image: '/project_imgs/project-image.png',
+  summary: 'A concise description of the problem, approach, and outcome.',
+  technologies: ['React', 'Node.js'],
+  links: [
+    {
+      label: 'View repository',
+      href: 'https://github.com/...',
+      type: 'github',
+    },
+  ],
+  featured: false,
+}
+```
+
+Setting `featured: true` gives a project the wide featured layout. New technology labels work automatically and do not require new CSS.
+
+## Edit portfolio content
+
+- Projects: `src/data/projects.js`
+- Skills and tool icons: `src/data/skills.js`
+- Contact details: `src/data/contact.js`
+- Hero copy: `src/sections/Hero.jsx`
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
