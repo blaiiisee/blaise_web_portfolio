@@ -33,6 +33,7 @@ export const skillGroups = [
       { name: 'Premiere Pro', asset: '/premierepro.svg' },
       { name: 'After Effects', asset: '/aftereffects.svg' },
       { name: 'Canva', asset: '/canva.svg' },
+      { name: 'Figma', asset: '/figma.svg' },
     ],
   },
 ]
